@@ -1,3 +1,12 @@
+# DRAWBACKS
+
+
+#  1 ) WASN'T ABLE TO DEPLOY APP ON EC2 EVEN AFTER TRYING MANY TIMES
+# THE $lookup thing for using rent in another collection named Transaction
+
+
+
+
 from flask import Flask, jsonify, request
 from flask_pymongo import PyMongo
 import os,re,datetime,pymongo
