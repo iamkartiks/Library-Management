@@ -7,7 +7,7 @@ Python
 Flask
 MongoDB
 MongoDB Compass 
-
+AWS EC2 - For deployemnt
 
 
 HOW TO EXECUTE THE ENDPOINTS ?
