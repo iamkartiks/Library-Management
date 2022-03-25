@@ -20,4 +20,4 @@ http://127.0.0.1:5000/issue-book - POST METHOD - ENTER VALUES IN JSON FORMAT
 http://127.0.0.1:5000/return-book - PUT METHOD - ENTER VALUES IN JSON FORMAT
 http://127.0.0.1:5000/book-issue-list/<bookname> - GET METHOD - ENTER INPUT NEXT TO THE URL
 http://127.0.0.1:5000/total-rent/<bookname> - GET METHOD - ENTER INPUT NEXT TO THE URL
-http://127.0.0.1:5000/books-issued-in-daterange/<ldate>/<hdate> - GET METHOD - ENTER INPUT NEXT TO THE URL
+http://127.0.0.1:5000/books-issued-in-daterange/<ldate>/<hdate> - GET METHOD - ENTER LOWER DATE AND HIGHER DATE NEXT TO URL

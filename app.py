@@ -134,10 +134,11 @@ def bookIssuedByLearners(bookname):
     current_issue_count = []
     for q in transaction.find(s):
         # if it is 0 which mean it is currently issued 
-        if list(q.values())[5] is 0:
-            current_issue_count.append(list(q.values())[1])
+        if q['status'] is 0:
+            print(list(q.values())[5])
+            current_issue_count.append(list(q.values())[2]) # As 2nd index in the dictionary model contains readers name
         # This list will contains all of issue activity
-        total_issue_count.append(list(q.values())[1])  
+        total_issue_count.append(list(q.values())[2])  
 
     return jsonify('Total Issues', total_issue_count, 'Current Issues', current_issue_count)
 
@@ -150,8 +151,8 @@ def learnerIssues(lender):
     books_issued = []
     for q in transaction.find(s):
         # This list will contains all the books that are currently issued by this reader
-        if list(q.values())[5] is 0:
-            books_issued.append(list(q.values())[1])  
+        if q['status'] is 0:
+            books_issued.append(list(q.values())[1])  # As 1st index in the dictionary model contains books name
 
     return jsonify('Book Issued', books_issued)
 
