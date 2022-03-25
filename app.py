@@ -1,8 +1,7 @@
 from flask import Flask, jsonify, request
 from flask_pymongo import PyMongo
-import os,re,datetime,pymongo,pytz
+import os,re,datetime,pymongo
 
-IST = pytz.timezone('Asia/Kolkata')
 
 app = Flask(__name__)
 
