@@ -6,7 +6,7 @@ import os,re,datetime,pymongo
 # DRAWBACKS
 
 
-#  1 ) WASN'T ABLE TO DEPLOY APP ON EC2 EVEN AFTER TRYING MANY TIMES
+#  1 ) WASN'T ABLE TO DEPLOY APP ON EC2 EVEN AFTER TRYING MANY TIMES so you need to run the application by using command 'python app.py'
 #  2 ) THE $lookup thing for using rent in another collection named Transaction
 
 
