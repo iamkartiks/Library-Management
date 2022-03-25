@@ -135,9 +135,9 @@ def bookIssuedByLearners(bookname):
     for q in transaction.find(s):
         # if it is 0 which mean it is currently issued 
         if list(q.values())[5] is 0:
-            current_issue_count.append(list(q.values())[2])
+            current_issue_count.append(list(q.values())[1])
         # This list will contains all of issue activity
-        total_issue_count.append(list(q.values())[2])  
+        total_issue_count.append(list(q.values())[1])  
 
     return jsonify('Total Issues', total_issue_count, 'Current Issues', current_issue_count)
 
