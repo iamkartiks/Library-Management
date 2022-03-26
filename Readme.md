@@ -3,13 +3,15 @@ This is the quixote assignment !!!
 
 Technologies and tools used :
 
-Python 
-Flask
-MongoDB
-MongoDB Compass 
+Python || 
+Flask ||
+MongoDB ||
+MongoDB Compass ||
+AWS EC2 - For deployemnt ||
 
 
 
+<<<<<<< HEAD
 HOW TO EXECUTE THE ENDPOINTS ?
 
 http://52.27.152.231:8080/book-by-term/<term> - GET METHOD - ENTER INPUT NEXT TO THE URL
@@ -21,3 +23,5 @@ http://52.27.152.231:8080/return-book - PUT METHOD - ENTER VALUES IN JSON FORMAT
 http://52.27.152.231:8080/book-issue-list/<bookname> - GET METHOD - ENTER INPUT NEXT TO THE URL
 http://52.27.152.231:8080/total-rent/<bookname> - GET METHOD - ENTER INPUT NEXT TO THE URL
 http://52.27.152.231:8080/books-issued-in-daterange/<ldate>/<hdate> - GET METHOD - ENTER LOWER DATE AND HIGHER DATE NEXT TO URL
+=======
+>>>>>>> aaa8a1256caec91d656b2fd8b651b191fdedfae8
