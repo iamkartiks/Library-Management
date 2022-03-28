@@ -104,7 +104,8 @@ def issueBook():
     issued_on = request.get_json("issued_on")
 
     if book_name and lender_name and request.method == 'POST':
-        book_id = transaction.insert_one({'book_name':list(book_name.values())[0], 'lender_name':list(lender_name.values())[1], 'issued_on': str(list(issued_on.values())[2]),'returned_on':"",'status':0, 'total_rent':0 })
+        book_id = transaction.insert_one({'book_name':list(book_name.values())[0], 'lender_name':list(lender_name.values())[1], 
+                                          'issued_on': str(list(issued_on.values())[2]),'returned_on':"",'status':0, 'total_rent':0 })
         return jsonify("Book is Issued")
 
 
@@ -174,7 +175,8 @@ def booksByIssueDate(ldate,hdate):
     output = []
     for q in transaction.find():
         
-        if {datetime.datetime.strptime(q['issued_on'], "%Y-%m-%d").date():{ '$gt' : datetime.datetime.strptime(ldate, "%Y-%m-%d").date(), '$lt' : datetime.datetime.strptime(hdate, "%Y-%m-%d").date()}}:
+        if {datetime.datetime.strptime(q['issued_on'], "%Y-%m-%d").date():{ '$gt' : datetime.datetime.strptime(ldate, "%Y-%m-%d").date(), 
+                                                                           '$lt' : datetime.datetime.strptime(hdate, "%Y-%m-%d").date()}}:
             output.append({'book_name':q['book_name']})
     
     # This line is used for filtering out duplicates which were recorded because multiple people issued same book
