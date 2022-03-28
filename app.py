@@ -2,10 +2,11 @@ from flask import Flask, jsonify, request
 from flask_pymongo import PyMongo
 import os,re,datetime,pymongo
 
-
-# DRAWBACK
-#  1 ) THE $lookup thing for using rent in another collection named Transaction , i wasn't able to do it either you give me bit of time for it and i can resolve if you want or you can help me with stuff.
-
+"""
+DRAWBACK
+ 1 ) THE $lookup thing for using rent in another collection named Transaction , 
+     i wasn't able to do it either you give me bit of time for it and i can resolve if you want or you can help me with stuff. ###
+"""
 
 app = Flask(__name__)
 
