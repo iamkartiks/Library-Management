@@ -1,0 +1,21 @@
+#     q = mongo.db.Transactions.aggregate( [
+#    {
+#      '$lookup':
+#        {
+#          'from': "Books",
+#          'localField': "book_name",
+#          'foreignField': "book_name",
+#          'as': "books_info"
+#        },
+#        {'$set':"Transactions['total_rent']":{"Books['rent_per_day]"}}
+#    }
+# ] )
+    # output = []
+    print(list(q))
+
+    # json_docs = [json.dumps(doc, default=json_util.default) for doc in q]
+
+    # docs = [json.loads(j_doc, object_hook=json_util.object_hook) for j_doc in json_docs]
+
+    # return jsonify(json_docs)
+    
