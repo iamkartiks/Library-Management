@@ -5,9 +5,6 @@ import os,re,pymongo
 from dateutil import parser
 from bson import json_util
 
-# DRAWBACK
-#  1 ) THE $lookup thing for using rent in another collection named Transaction , i wasn't able to do it either you give me bit of time for it and i can resolve if you want or you can help me with stuff.
-
 
 app = Flask(__name__)
 
