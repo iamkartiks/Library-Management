@@ -1,5 +1,6 @@
 from flask import Flask, jsonify, request
 from flask_pymongo import PyMongo
+<<<<<<< HEAD
 from datetime import datetime
 import os,re,pymongo
 from dateutil import parser
@@ -8,6 +9,15 @@ from bson import json_util
 # DRAWBACK
 #  1 ) THE $lookup thing for using rent in another collection named Transaction , i wasn't able to do it either you give me bit of time for it and i can resolve if you want or you can help me with stuff.
 
+=======
+import os,re,datetime,pymongo
+
+"""
+DRAWBACK
+ 1 ) THE $lookup thing for using rent in another collection named Transaction , 
+     i wasn't able to do it either you give me bit of time for it and i can resolve if you want or you can help me with stuff. ###
+"""
+>>>>>>> d21307cea037510c0ed83d7b2759ba13a0425d8f
 
 app = Flask(__name__)
 
@@ -104,7 +114,12 @@ def issueBook():
     issued_on = request.get_json("issued_on")
 
     if book_name and lender_name and request.method == 'POST':
+<<<<<<< HEAD
         book_id = transaction.insert_one({'book_name':list(book_name.values())[0], 'lender_name':list(lender_name.values())[1], 'issued_on': list(lender_name.values())[2],'returned_on':"",'status':0, 'total_rent':0 })
+=======
+        book_id = transaction.insert_one({'book_name':list(book_name.values())[0], 'lender_name':list(lender_name.values())[1], 
+                                          'issued_on': str(list(issued_on.values())[2]),'returned_on':"",'status':0, 'total_rent':0 })
+>>>>>>> d21307cea037510c0ed83d7b2759ba13a0425d8f
         return jsonify("Book is Issued")
 
 
@@ -181,8 +196,14 @@ def totalRent():
 def booksByIssueDate(ldate,hdate):
     output = []
     for q in transaction.find():
+<<<<<<< HEAD
         # 'rent_per_day':{ '$gt' : int(low), '$lt' : int(high)}, list(q.values())[3]
         if parser.parse(q['issued_on']) >= parser.parse(ldate) and parser.parse(q['issued_on']) < parser.parse(hdate) :
+=======
+        
+        if {datetime.datetime.strptime(q['issued_on'], "%Y-%m-%d").date():{ '$gt' : datetime.datetime.strptime(ldate, "%Y-%m-%d").date(), 
+                                                                           '$lt' : datetime.datetime.strptime(hdate, "%Y-%m-%d").date()}}:
+>>>>>>> d21307cea037510c0ed83d7b2759ba13a0425d8f
             output.append({'book_name':q['book_name']})
         else:
             output.append({})
