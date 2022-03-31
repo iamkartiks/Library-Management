@@ -104,12 +104,7 @@ def issueBook():
     issued_on = request.get_json("issued_on")
 
     if book_name and lender_name and request.method == 'POST':
-<<<<<<< HEAD
         book_id = transaction.insert_one({'book_name':list(book_name.values())[0], 'lender_name':list(lender_name.values())[1], 'issued_on': list(lender_name.values())[2],'returned_on':"",'status':0, 'total_rent':0 })
-=======
-        book_id = transaction.insert_one({'book_name':list(book_name.values())[0], 'lender_name':list(lender_name.values())[1], 
-                                          'issued_on': str(list(issued_on.values())[2]),'returned_on':"",'status':0, 'total_rent':0 })
->>>>>>> d21307cea037510c0ed83d7b2759ba13a0425d8f
         return jsonify("Book is Issued")
 
 
