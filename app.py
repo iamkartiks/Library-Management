@@ -9,7 +9,7 @@ from bson import json_util
 app = Flask(__name__)
 
 app.config['MONGO_DBNAME'] = 'books'
-app.config['MONGO_URI'] = 'mongodb+srv://quixote:Arianna22@cluster0.pzwws.mongodb.net/books?retryWrites=true&w=majority'
+app.config['MONGO_URI'] = 'mongodb+srv://quixote:<password>@cluster0.pzwws.mongodb.net/books?retryWrites=true&w=majority'
 
 
 
